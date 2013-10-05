@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+  <title>NOVO Transformadores</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/links.css" type="text/css" media="all" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript">
+  
+  function validar() {
+  var valido = false;
+    
+  if (nome.value.length == 0){
+  valido = false;
+  nome.focus();
+  alert ('Campo nome obrigatório.');
+  
+  }else if(email.value.length == 0 && telefone.value.length == 0) {
+  valido = false;
+  alert ('Um dos campos de email ou telefone deve ser preenchido.');
+  
+  }else if(assunto.value.length == 0) {
+  valido = false;
+  assunto.focus();
+  alert ('Campo assunto obrigatório.');
+  
+  }else if(mensagem.value.length == 0) {
+  valido = false;
+  mensagem.focus();
+  alert ('Campo mensagem obrigatório.');
+  
+  }else if(cod.value.length == 0) {
+  valido = false;
+  cod.focus();
+  alert ('Campo código obrigatório.');
+  
+  }else {
+  valido = true;
+  }
+  return valido;
+  }
+  </script>
+  
+</head>
+	<body>
+		<div id="main">  
+			<div class="inner">
+				<h2>CONTATO<span>Entre em contato com a NOVO Transformadores</span></h2>
+				<form id="form-contato" action="forms/contato.php" method="post" name="form-contato" onsubmit="return validar();">
+				    <div id="form">
+				      <div id="quem-comenta">
+					<h3>Nome Completo</h3>
+					<input type="text" title="Entre com seu nome completo em letras maiúsculas" name="nome" id="nome" size="25" onkeyup="this.value=this.value.toUpperCase()"></input>
+					<h3>E-Mail para Resposta</h3>
+					<input type="text" title="Entre com seu e-mail para contato" name="email" id="email" size="25" onkeyup="this.value=this.value.toLowerCase()"></input>
+					<h3>Telefone de Contato</h3>
+					<input type="text" title="Entre com seu e-mail para contato" name="telefone" size="25" id="telefone"></input>
+				      </div>
+				      <div id="box-comentario">
+					<h3>Assunto</h3>
+					<input type="text" title="Entre com seu nome completo em letras maiúsculas" name="assunto" id="assunto" size="38"></input>
+					<h3>Mensagem</h3>
+					<textarea type="text" title="Entre com seu e-mail para contato" name="mensagem" id="mensagem" rows="4" cols="40"></textarea>
+				      </div>
+				    </div>
+				  <img name="" src="codes/antispan.php" alt=""></img><input name="cod" type="text" title="Digite com o número ao lado" id="cod" size="5"></input>
+				  <input type="submit" title="Clique aqui para enviar o formulário" value="Enviar"></input>
+				  <h5>Se preferir envie e-mail para <a href="http://www.google.com/recaptcha/mailhide/d?k=01unCi0x61eOSV6woNRGYKgw==&amp;c=nGfRn9XsMRQ3QN6-JK3e5eitnzQbPT1QAwOGzUBTaPsC1rf_YYgGUqKCvshDKSoA" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501unCi0x61eOSV6woNRGYKgw\75\75\46c\75nGfRn9XsMRQ3QN6-JK3e5eitnzQbPT1QAwOGzUBTaPsC1rf_YYgGUqKCvshDKSoA', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Mostrar e-mail completo">contato@novotransformadores.com.br</a></h5>
+				</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
